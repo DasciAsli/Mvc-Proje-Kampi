@@ -155,3 +155,16 @@ C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csproj.A
 C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csproj.CoreCompileInputs.cache
 C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.dll
 C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.pdb
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\BusinessLayer.dll
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\DataAccessLayer.dll
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\EntityFramework.dll
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\EntityFramework.SqlServer.dll
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\EntityLayer.dll
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\BusinessLayer.pdb
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\BusinessLayer.dll.config
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\DataAccessLayer.pdb
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\DataAccessLayer.dll.config
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\EntityLayer.pdb
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\EntityLayer.dll.config
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\EntityFramework.xml
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\EntityFramework.SqlServer.xml
