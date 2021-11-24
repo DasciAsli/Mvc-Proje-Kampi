@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstract
 {
+    //T burada generic yapıyı temsil eder.
+    //Yani her sınıf için ayrı bir interface belirlemek yerine
+    //T nin yerine farklı türlerde veriler getirip ,her sınıf için Interface'i kullanılabiir hale getirerek
+    //Kodlarımızı DRY prensibine uygun hale getirmiş olduk
     public interface IRepository<T> 
-        //T burada generic yapıyı temsil eder.
-        //Yani her sınıf için ayrı bir interface belirlemek yerine
-        //T nin yerine farklı türlerde veriler getirip ,her sınıf için Interface'i kullanılabiir hale getirerek
-        //Kodlarımızı DRY prensibine uygun hale getirmiş olduk
+        
     {
         List<T> List(); //Listeleme
         void Insert(T p); //Ekleme

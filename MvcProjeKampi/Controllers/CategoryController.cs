@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace MvcProjeKampi.Controllers
 {
     public class CategoryController : Controller
     {
-        CategoryManager cm = new CategoryManager();
+        CategoryManager cm = new CategoryManager(new EfCategoryDal());
 
         // GET: Category
         public ActionResult Index()
@@ -19,7 +20,8 @@ namespace MvcProjeKampi.Controllers
         }
         public ActionResult GetCategoryList()
         {
-            var categoryvalues = cm.GetAllBL();
+            var categoryvalues = cm.GetList();
+           
             return View(categoryvalues);
         }
         [HttpGet] //Sayfam yüklendiğinde çalışacak
@@ -29,11 +31,10 @@ namespace MvcProjeKampi.Controllers
         }
 
 
-
         [HttpPost] //Sayfamda bir şey post edildiğinde çalışacak
         public ActionResult AddCategory(Category p)
         {
-            cm.CategoryAddBL(p);
+            // cm.CategoryAddBL(p);
             return RedirectToAction("GetCategoryList");
             //Ekleme işlemini gerçekleştirdikten sonra beni GetCategoryList metoduna gönder
         }
