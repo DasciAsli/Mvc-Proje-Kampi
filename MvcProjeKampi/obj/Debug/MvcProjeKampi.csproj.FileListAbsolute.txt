@@ -168,3 +168,5 @@ C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\EntityLayer.pdb
 C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\EntityLayer.dll.config
 C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\EntityFramework.xml
 C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\EntityFramework.SqlServer.xml
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\FluentValidation.dll
+C:\Users\hp\Desktop\MvcProjeKampi\MvcProjeKampi\bin\FluentValidation.xml

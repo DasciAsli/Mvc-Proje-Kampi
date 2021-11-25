@@ -15,3 +15,6 @@ C:\Users\hp\Desktop\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csproj.A
 C:\Users\hp\Desktop\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Users\hp\Desktop\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\hp\Desktop\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\hp\Desktop\MvcProjeKampi\BusinessLayer\bin\Debug\FluentValidation.dll
+C:\Users\hp\Desktop\MvcProjeKampi\BusinessLayer\bin\Debug\FluentValidation.xml
+C:\Users\hp\Desktop\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
