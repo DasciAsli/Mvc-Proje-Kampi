@@ -27,6 +27,11 @@ namespace DataAccessLayer.Concrete.Repositories
             c.SaveChanges();
         }
 
+        public T Get(Expression<Func<T, bool>> filter) //Tek bir veri almak için bunu kullanıyoruz
+        {
+            return _object.SingleOrDefault(filter);//Bir dizi de ya da listede sadece bir değer döndürmek için kullanılan Linq metodu
+        }
+
         public void Insert(T p)
         {
             _object.Add(p);
@@ -38,13 +43,13 @@ namespace DataAccessLayer.Concrete.Repositories
             return _object.ToList();
         }
 
-        public List<T> List(Expression<Func<T, bool>> filter)
+        public List<T> List(Expression<Func<T, bool>> filter) //Liste halinde verileri getirmek için bunu kullanıyoruz.
         {
             return _object.Where(filter).ToList();
         }
 
         public void Update(T p)
-        {
+        {               
             c.SaveChanges();
         }
     }
