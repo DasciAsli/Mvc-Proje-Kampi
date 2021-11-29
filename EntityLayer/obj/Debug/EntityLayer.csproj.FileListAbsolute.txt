@@ -9,3 +9,14 @@ C:\Users\hp\Desktop\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.Assem
 C:\Users\hp\Desktop\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
 C:\Users\hp\Desktop\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.dll
 C:\Users\hp\Desktop\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.pdb
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\bin\Debug\EntityLayer.dll
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.dll
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.xml
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.pdb
