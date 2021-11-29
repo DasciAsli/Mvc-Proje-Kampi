@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    .card
+    {
+        box-sizing:border-box;
+        border:none;
+        box-shadow:none;
+        background-color:transparent;
+        height:150px;
+                
+    }
+</style>
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-3 col-md-4 col-xs-6 ">
+            <div class="card p-4 bg-success">
+                <h2 class=" mb-3 ">@ViewBag.KategoriSayisi</h2>
+                <p class=" mb-2  ">KategoriSayisi</p>
+
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 ">
+            <div class="card p-4 bg-warning ">
+                <h2 class=" mb-3 text-white">@ViewBag.BaslikSayisi</h2>
+                <p class=" mb-2 text-white ">Kategorisi Yazılım Olan Başlık Sayısı</p>
+
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6  ">
+            <div class="card p-4 bg-danger">
+                <h2 class=" mb-3 ">@ViewBag.YazarSayisi</h2>
+                <p class=" mb-2  ">Adında 'A' Harfi Geçen Yazar Sayısı</p>
+
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6  ">
+            <div class="card p-4 bg-primary">
+                <h2 class="mb-3 ">@ViewBag.EnFazlaBaslikSahibiKategori</h2>
+                <p class=" mb-2  ">En Fazla Baslik Sahibi Kategori</p>
+
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6  ">
+            <div class="card p-4 bg-info">
+                <h2 class="mb-3 ">@ViewBag.Fark</h2>
+                <p class=" mb-2  ">Kategori Tablosundaki Aktif Pasif Farkı</p>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
