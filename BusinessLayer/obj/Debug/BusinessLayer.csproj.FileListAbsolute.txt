@@ -37,3 +37,4 @@ C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\BusinessLayer\obj\Debug\Busin
 C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
