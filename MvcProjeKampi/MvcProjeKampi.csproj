@@ -133,6 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
+    <Compile Include="Controllers\AdminContentController.cs" />
     <Compile Include="Controllers\AdminHeadingController.cs" />
     <Compile Include="Controllers\AdminWriterController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
@@ -2281,6 +2282,8 @@
     <Content Include="Views\AdminWriter\EditWriter.cshtml" />
     <Content Include="Views\AdminHeading\Index.cshtml" />
     <Content Include="Views\AdminHeading\AddHeading.cshtml" />
+    <Content Include="Views\AdminContent\ContentByHeading.cshtml" />
+    <Content Include="Views\AdminHeading\EditHeading.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

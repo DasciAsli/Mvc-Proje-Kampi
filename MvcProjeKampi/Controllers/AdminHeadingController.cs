@@ -33,11 +33,11 @@ namespace MvcProjeKampi.Controllers
 
             ViewBag.vlc = valuecategory;
             List<SelectListItem> valuewriter = (from x in wm.GetList()
-                                                  select new SelectListItem
-                                                  {
-                                                      Text = x.WriterName + " " + x.WriterSurname,
-                                                      Value = x.WriterId.ToString()
-                                                  }).ToList();
+                                                select new SelectListItem
+                                                {
+                                                    Text = x.WriterName + " " + x.WriterSurname,
+                                                    Value = x.WriterId.ToString()
+                                                }).ToList();
 
             ViewBag.vlw = valuewriter;
 
@@ -50,5 +50,39 @@ namespace MvcProjeKampi.Controllers
             hm.HeadingAdd(heading);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult EditHeading(int id)
+        {
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryId.ToString()
+                                                  }).ToList();
+            ViewBag.vlc = valuecategory;
+            var headingvalue = hm.GetByID(id);
+            return View(headingvalue);
+        }
+
+        [HttpPost]
+        public ActionResult EditHeading(Heading heading)
+        {
+                       
+            hm.HeadingUpdate(heading);
+            return RedirectToAction("Index");
+        }
+
+       
+        public ActionResult DeleteHeading(int id)
+        {
+
+            var headingvalue = hm.GetByID(id);
+            hm.HeadingDelete(headingvalue);
+            
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

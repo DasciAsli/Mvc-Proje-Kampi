@@ -32,6 +32,8 @@ namespace EntityLayer.Concrete
         [StringLength(200)]
         public string WriterPassword { get; set; }
 
+        public bool WriterStatus { get; set; }
+
 
         [StringLength(50)]
         public string WriterTitle { get; set; }

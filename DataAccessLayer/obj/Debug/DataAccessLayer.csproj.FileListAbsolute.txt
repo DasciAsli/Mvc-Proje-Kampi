@@ -33,3 +33,6 @@ C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\Dat
 C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_edit.resources
 C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writertitle_add.resources
 C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_imagesizechange.resources
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_status.resources
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_contentstatusadd.resources
+C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_headingstatusadd.resources
