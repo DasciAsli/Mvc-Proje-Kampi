@@ -35,14 +35,15 @@ namespace BusinessLayer.Concrete
 
         public void HeadingDelete(Heading heading)
         {
-            if (heading.HeadingStatus == false)
-            {
-                heading.HeadingStatus = true;
-            }
-            else
-            {
-                heading.HeadingStatus = false;
-            }
+            //Bu işlemi burada yapmamız prensiplere uygun değil.Controller içinde uygun işlemleri yapmak daha mantıklı
+            //if (heading.HeadingStatus == false)
+            //{
+            //    heading.HeadingStatus = true;
+            //}
+            //else
+            //{
+            //    heading.HeadingStatus = false;
+            //}
             
             _headingDal.Update(heading);
         }

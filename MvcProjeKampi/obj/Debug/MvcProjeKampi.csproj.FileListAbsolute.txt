@@ -264,4 +264,3 @@ C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcPr
 C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csproj.CoreCompileInputs.cache
 C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.dll
 C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.pdb
-C:\Users\hp\Desktop\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csproj.CopyComplete
