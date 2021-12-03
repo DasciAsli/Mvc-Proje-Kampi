@@ -1,4 +1,4 @@
-﻿using BusinessLayer.Concrete;
+﻿ using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using System;
@@ -12,6 +12,7 @@ namespace MvcProjeKampi.Controllers
     public class AdminContactController : Controller
     {
         ContactManager cm = new ContactManager(new EfContactDal());
+        MessageManager mm = new MessageManager(new EfMessageDal());
         ContactValidator cv = new ContactValidator();
         // GET: AdminContact
         public ActionResult Index()
@@ -24,6 +25,13 @@ namespace MvcProjeKampi.Controllers
         {
             var contactvalues =cm.GetByID(id);
             return View(contactvalues);
+        }
+        public PartialViewResult MessageListMenu()
+        {
+            ViewBag.ContactMessageCount = cm.GetList().Count();
+            ViewBag.MessageInboxCount = mm.GetListInbox().Count();
+            ViewBag.MessageSendBoxCount = mm.GetListSendbox().Count();
+            return PartialView();
         }
     }
 }
