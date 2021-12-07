@@ -61,3 +61,4 @@ D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAcces
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_message_class.resources
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_messagecontent_update.resources
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_contactadddate.resources
+D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_Imagefileadd.resources
