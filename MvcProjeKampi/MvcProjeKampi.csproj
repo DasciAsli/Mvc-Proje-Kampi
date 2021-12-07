@@ -2296,6 +2296,7 @@
     <Content Include="Views\AdminMessage\SendBox.cshtml" />
     <Content Include="Views\AdminMessage\NewMessage.cshtml" />
     <Content Include="Views\AdminMessage\GetInboxMessageDetails.cshtml" />
+    <Content Include="Views\AdminMessage\GetSendboxMessageDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
