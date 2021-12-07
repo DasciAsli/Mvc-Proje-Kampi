@@ -357,3 +357,4 @@ D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKam
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csproj.CoreCompileInputs.cache
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.dll
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.pdb
+D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csproj.CopyComplete
