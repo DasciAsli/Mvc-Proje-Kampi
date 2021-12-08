@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -24,9 +25,21 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult Index(Admin admin)
         {
-            //Context c = new Context();
-            //var adminuserinfo = c.Admins.FirstOrDefault(X => X.AdminUserName == admin.AdminUserName && X.AdminPassword == admin.AdminPassword);
-            //if (adminuserinfo != null)
+            Context c = new Context();
+            var adminuserinfo = c.Admins.FirstOrDefault(X => X.AdminUserName == admin.AdminUserName && X.AdminPassword == admin.AdminPassword);
+            if (adminuserinfo != null)
+            {
+                FormsAuthentication.SetAuthCookie(adminuserinfo.AdminUserName, false);
+                Session["AdminUserName"] = adminuserinfo.AdminUserName;
+                return RedirectToAction("Index", "AdminCategory");
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+
+            //var adminlist = adm.GetListAdmin(admin);
+            //if (adminlist.Count() != 0)
             //{
             //    return RedirectToAction("Index", "AdminCategory");
             //}
@@ -34,16 +47,6 @@ namespace MvcProjeKampi.Controllers
             //{
             //    return RedirectToAction("Index");
             //}
-
-            var adminlist = adm.GetListAdmin(admin);
-            if (adminlist.Count() != 0)
-            {
-                return RedirectToAction("Index", "AdminCategory");
-            }
-            else
-            {
-                return RedirectToAction("Index");
-            }
 
         }
     }

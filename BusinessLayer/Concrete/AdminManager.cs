@@ -42,9 +42,11 @@ namespace BusinessLayer.Concrete
             return _admindal.Get(x => x.AdminId == id);
         }
 
+
+        //Solid'e uygun mu sorulmalı?
         public List<Admin> GetListAdmin(Admin admin)
         {
-            return _admindal.List(x=>x.AdminUserName==admin.AdminUserName && x.AdminPassword==admin.AdminPassword);
+            return _admindal.List(x => x.AdminUserName == admin.AdminUserName && x.AdminPassword == admin.AdminPassword);
         }
 
         public List<Admin> GetList()

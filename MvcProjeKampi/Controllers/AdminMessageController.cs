@@ -19,7 +19,7 @@ namespace MvcProjeKampi.Controllers
         MessageValidator writervalidator = new MessageValidator();
 
         // GET: AdminMessage
-        [Authorize]
+       
         public ActionResult Inbox()
         {
             var messagevalues = mm.GetListInbox();
