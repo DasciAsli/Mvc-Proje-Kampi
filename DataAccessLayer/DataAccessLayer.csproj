@@ -147,6 +147,10 @@
     <Compile Include="Migrations\202112091443200_mig_update_skill.designer.cs">
       <DependentUpon>202112091443200_mig_update_skill.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112091607423_mig_add_isDraft.cs" />
+    <Compile Include="Migrations\202112091607423_mig_add_isDraft.designer.cs">
+      <DependentUpon>202112091607423_mig_add_isDraft.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -214,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112091443200_mig_update_skill.resx">
       <DependentUpon>202112091443200_mig_update_skill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112091607423_mig_add_isDraft.resx">
+      <DependentUpon>202112091607423_mig_add_isDraft.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

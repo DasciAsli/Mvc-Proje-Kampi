@@ -28,7 +28,8 @@ namespace MvcProjeKampi.Controllers
         public ActionResult SendBox()
         {
             var messagevalues = mm.GetListSendbox();
-            return View(messagevalues);
+            var sendmessages = messagevalues.FindAll(x => x.isDraft == false);            
+            return View(sendmessages);
         }
 
         [HttpGet]
@@ -38,26 +39,66 @@ namespace MvcProjeKampi.Controllers
         }
 
         [HttpPost]
-        public ActionResult NewMessage(Message message)
+        public ActionResult NewMessage(Message message,string button)
         {
-            
             ValidationResult result = writervalidator.Validate(message);
-            if (result.IsValid)
+
+            if (button == "draft")
             {
-                message.SenderMail = "admin@gmail.com";
-                message.MessageDate = DateTime.Now;
-                mm.MessageAdd(message);
-                return RedirectToAction("Sendbox");
-            }
-            else
-            {
-                foreach (var item in result.Errors)
+
+                
+                if (result.IsValid)
                 {
-                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                    message.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+                    message.SenderMail = "admin@gmail.com";
+                    message.isDraft = true;
+                    mm.MessageAdd(message);
+                    return RedirectToAction("Draft");
+                }
+                else
+                {
+                    foreach (var item in result.Errors)
+                    {
+                        ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                    }
                 }
             }
-
+            else if (button == "save")
+            {
+                
+                if (result.IsValid)
+                {
+                    message.MessageDate = DateTime.Now;
+                    message.SenderMail = "admin@gmail.com";
+                    message.isDraft = false;
+                    mm.MessageAdd(message);
+                    return RedirectToAction("SendBox");
+                }
+                else
+                {
+                    foreach (var item in result.Errors)
+                    {
+                        ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                    }
+                }
+            }
             return View();
+            //if (result.IsValid)
+            //{
+            //    message.SenderMail = "admin@gmail.com";
+            //    message.MessageDate = DateTime.Now;
+            //    mm.MessageAdd(message);
+            //    return RedirectToAction("Sendbox");
+            //}
+            //else
+            //{
+            //    foreach (var item in result.Errors)
+            //    {
+            //        ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+            //    }
+            //}
+
+            //return View();
         }
         public ActionResult GetInboxMessageDetails(int id)
         {
@@ -71,6 +112,18 @@ namespace MvcProjeKampi.Controllers
             var values = mm.GetByID(id);
             return View(values);
         }
-       
+        public ActionResult Draft()
+        {            
+            var sendList = mm.GetListSendbox();
+            var draftList = sendList.FindAll(x => x.isDraft == true);
+            return View(draftList);
+        }
+
+        public ActionResult GetDraftMessageDetails(int id)
+        {           
+            var Values = mm.GetByID(id);
+            return View(Values);
+        }
+
     }
 }
