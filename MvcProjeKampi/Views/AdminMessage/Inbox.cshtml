@@ -71,21 +71,64 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                        <tr>
-                                            <td>
-                                                <div class="icheck-primary">
-                                                    <input type="checkbox" value="" id="check1">
-                                                    <label for="check1"></label>
-                                                </div>
-                                            </td>
-                                            <td class="mailbox-star"><a href="/AdminMessage/GetInboxMessageDetails/@item.MessageId"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/AdminMessage/GetInboxMessageDetails/@item.MessageId">@item.SenderMail</a></td>
-                                            <td class="mailbox-subject">
-                                                <b>@item.Subject</b> - @item.MessageContent<span>..</span>
-                                            </td>
-                                            <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">@item.MessageDate</td>
-                                        </tr>
+                                        if (item.ReadStatus == false)
+                                        {
+                                            <tr class="bg-blue">
+                                                <td>
+                                                    <div class="icheck-primary">
+                                                        <input type="checkbox" value="" id="check1">
+                                                        <label for="check1"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="mailbox-star"><a href="/AdminMessage/GetInboxMessageDetails/@item.MessageId"><i class="fas fa-star text-warning"></i></a></td>
+                                                <td class="mailbox-name "><a href="/AdminMessage/GetInboxMessageDetails/@item.MessageId" class="text-white">@item.SenderMail</a></td>
+                                                <td class="mailbox-subject">
+                                                    @if (@item.MessageContent.Length > 30)
+                                                    {
+                                                        <b>@item.Subject - </b>@item.MessageContent.Substring(0, 30)<span>..</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <b>@item.Subject - </b>@item.MessageContent
+                                                    }
+
+                                                </td>
+                                                <td class="mailbox-attachment"></td>
+                                                <td class="mailbox-date">@item.MessageDate</td>
+                                            </tr>
+
+
+
+                                        }
+                                        else
+                                        {
+                                            <tr class="bg-white text-decoration-none text-muted">
+                                                <td>
+                                                    <div class="icheck-primary">
+                                                        <input type="checkbox" value="" id="check1">
+                                                        <label for="check1"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="mailbox-star"><a href="/AdminMessage/GetInboxMessageDetails/@item.MessageId"><i class="fas fa-star text-warning"></i></a></td>
+                                                <td class="mailbox-name "><a href="/AdminMessage/GetInboxMessageDetails/@item.MessageId">@item.SenderMail</a></td>
+                                                <td class="mailbox-subject">
+                                                    @if (@item.MessageContent.Length > 30)
+                                                    {
+                                                        <b>@item.Subject - </b>@item.MessageContent.Substring(0, 30)<span>..</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <b>@item.Subject - </b>@item.MessageContent
+                                                    }
+
+                                                </td>
+                                                <td class="mailbox-attachment"></td>
+                                                <td class="mailbox-date">@item.MessageDate</td>
+                                            </tr>
+
+                                      
+                                        }
+
                                     }
 
                                 </tbody>

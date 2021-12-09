@@ -129,6 +129,14 @@
     <Compile Include="Migrations\202112091118012_mig_aboutStatus.designer.cs">
       <DependentUpon>202112091118012_mig_aboutStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112091219174_mig_readstatus_contact.cs" />
+    <Compile Include="Migrations\202112091219174_mig_readstatus_contact.designer.cs">
+      <DependentUpon>202112091219174_mig_readstatus_contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112091319122_mig_readstatus_message.cs" />
+    <Compile Include="Migrations\202112091319122_mig_readstatus_message.designer.cs">
+      <DependentUpon>202112091319122_mig_readstatus_message.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -184,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112091118012_mig_aboutStatus.resx">
       <DependentUpon>202112091118012_mig_aboutStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112091219174_mig_readstatus_contact.resx">
+      <DependentUpon>202112091219174_mig_readstatus_contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112091319122_mig_readstatus_message.resx">
+      <DependentUpon>202112091319122_mig_readstatus_message.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

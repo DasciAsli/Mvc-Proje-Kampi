@@ -23,7 +23,7 @@ namespace EntityLayer.Concrete
 
         public DateTime ContactDate { get; set; }
 
-
+        public bool ReadStatus { get; set; }
         public string Message { get; set; }
     }
 }

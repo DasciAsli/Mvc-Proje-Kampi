@@ -17,14 +17,14 @@
                 <div class="col-sm-6">
                     <h1>Mesaj Sayfası</h1>
                 </div>
-                
+
             </div>
         </div><!-- /.container-fluid -->
     </section>
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            @Html.Action("MessageListMenu","AdminContact")
+            @Html.Action("MessageListMenu", "AdminContact")
             <!-- /.col -->
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
@@ -71,22 +71,62 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                        <tr>
-                                            <td>
-                                                <div class="icheck-primary">
-                                                    <input type="checkbox" value="" id="check1">
-                                                    <label for="check1"></label>
-                                                </div>
-                                            </td>
-                                            <td class="mailbox-star"><a href="/AdminContact/GetContactDetails/@item.ContactId"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/AdminContact/GetContactDetails/@item.ContactId">@item.UserName</a></td>
-                                            <td class="mailbox-subject">
-                                                <b>@item.Subject</b> - @item.Message.Substring(0,30)<span>..</span>
-                                            </td>
-                                            <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">@item.ContactDate</td>
-                                        </tr>
+                                        if (item.ReadStatus == false)
+                                        {
+                                            <tr class="bg-blue">
+                                                <td>
+                                                    <div class="icheck-primary">
+                                                        <input type="checkbox" value="" id="check1">
+                                                        <label for="check1"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="mailbox-star"><a href="/AdminContact/GetContactDetails/@item.ContactId"><i class="fas fa-star text-warning"></i></a></td>
+                                                <td class="mailbox-name "><a href="/AdminContact/GetContactDetails/@item.ContactId" class="text-white">@item.UserName</a></td>
+                                                <td class="mailbox-subject">
+                                                    @if (@item.Message.Length > 30)
+                                                    {
+                                                        <b>@item.Subject - </b>@item.Message.Substring(0, 30)<span>..</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <b>@item.Subject - </b>@item.Message
+                                                    }
+
+                                                </td>
+                                                <td class="mailbox-attachment"></td>
+                                                <td class="mailbox-date">@item.ContactDate</td>
+                                            </tr>
+
+                                        }
+                                        else
+                                        {
+                                            <tr class="bg-white text-decoration-none text-muted">
+                                                <td>
+                                                    <div class="icheck-primary">
+                                                        <input type="checkbox" value="" id="check1">
+                                                        <label for="check1"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="mailbox-star"><a href="/AdminContact/GetContactDetails/@item.ContactId"><i class="fas fa-star text-warning"></i></a></td>
+                                                <td class="mailbox-name "><a href="/AdminContact/GetContactDetails/@item.ContactId">@item.UserName</a></td>
+                                                <td class="mailbox-subject">
+                                                    @if (@item.Message.Length > 30)
+                                                    {
+                                                        <b>@item.Subject - </b> @item.Message.Substring(0, 30)<span>..</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <b>@item.Subject - </b>@item.Message
+                                                    }
+
+                                                </td>
+                                                <td class="mailbox-attachment"></td>
+                                                <td class="mailbox-date">@item.ContactDate</td>
+                                            </tr>
+                                        }
+
                                     }
+
 
                                 </tbody>
                             </table>
@@ -125,7 +165,7 @@
             <!-- /.col -->
         </div>
         <!-- /.row -->
-        
+
     </section>
 
 </body>

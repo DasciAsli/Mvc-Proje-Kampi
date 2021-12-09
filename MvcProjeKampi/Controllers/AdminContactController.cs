@@ -24,13 +24,14 @@ namespace MvcProjeKampi.Controllers
         public ActionResult GetContactDetails(int id)
         {
             var contactvalues =cm.GetByID(id);
+            contactvalues.ReadStatus = true;
+            cm.ContactUpdate(contactvalues);
             return View(contactvalues);
         }
         public PartialViewResult MessageListMenu()
         {
-            ViewBag.ContactMessageCount = cm.GetList().Count();
-            ViewBag.MessageInboxCount = mm.GetListInbox().Count();
-            ViewBag.MessageSendBoxCount = mm.GetListSendbox().Count();
+            ViewBag.ContactMessageCount = cm.GetList().Where(x => x.ReadStatus == false).Count();
+            ViewBag.MessageInboxCount = mm.GetListInbox().Where(x => x.ReadStatus == false).Count();        
             return PartialView();
         }
     }
