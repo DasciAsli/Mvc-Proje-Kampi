@@ -26,12 +26,27 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult AddAbout(About about)
         {
+            about.AboutStatus = false;
             abm.AboutAdd(about);
             return RedirectToAction("Index");
         }
         public PartialViewResult AboutPartial()
         {
             return PartialView();
+        }
+        public ActionResult AboutStatus(int id)
+        {
+            var aboutvalues = abm.GetByID(id);
+            if (aboutvalues.AboutStatus == true)
+            {
+                aboutvalues.AboutStatus = false;
+            }
+            else 
+            {
+                aboutvalues.AboutStatus = true;
+            }
+            abm.AboutUpdate(aboutvalues);
+            return RedirectToAction("Index");
         }
     }
 }

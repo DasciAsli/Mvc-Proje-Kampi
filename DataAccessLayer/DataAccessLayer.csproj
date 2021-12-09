@@ -121,6 +121,14 @@
     <Compile Include="Migrations\202112071457401_mig_admin_table.designer.cs">
       <DependentUpon>202112071457401_mig_admin_table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112091114416_mig_adminstatusadd.cs" />
+    <Compile Include="Migrations\202112091114416_mig_adminstatusadd.designer.cs">
+      <DependentUpon>202112091114416_mig_adminstatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112091118012_mig_aboutStatus.cs" />
+    <Compile Include="Migrations\202112091118012_mig_aboutStatus.designer.cs">
+      <DependentUpon>202112091118012_mig_aboutStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -170,6 +178,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112071457401_mig_admin_table.resx">
       <DependentUpon>202112071457401_mig_admin_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112091114416_mig_adminstatusadd.resx">
+      <DependentUpon>202112091114416_mig_adminstatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112091118012_mig_aboutStatus.resx">
+      <DependentUpon>202112091118012_mig_aboutStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
