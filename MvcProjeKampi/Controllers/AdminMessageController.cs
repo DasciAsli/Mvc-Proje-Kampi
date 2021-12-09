@@ -71,5 +71,6 @@ namespace MvcProjeKampi.Controllers
             var values = mm.GetByID(id);
             return View(values);
         }
+       
     }
 }

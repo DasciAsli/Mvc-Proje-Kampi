@@ -60,6 +60,7 @@
     <Compile Include="Abstract\IImageFileDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\ISkillDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
     <Compile Include="EntityFramework\EfImageFileDal.cs" />
     <Compile Include="EntityFramework\EfMessageDal.cs" />
+    <Compile Include="EntityFramework\EfSkillDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202111221621249_mig1.cs" />
     <Compile Include="Migrations\202111221621249_mig1.designer.cs">
@@ -137,6 +139,14 @@
     <Compile Include="Migrations\202112091319122_mig_readstatus_message.designer.cs">
       <DependentUpon>202112091319122_mig_readstatus_message.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112091416386_mig_addSkill.cs" />
+    <Compile Include="Migrations\202112091416386_mig_addSkill.designer.cs">
+      <DependentUpon>202112091416386_mig_addSkill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112091443200_mig_update_skill.cs" />
+    <Compile Include="Migrations\202112091443200_mig_update_skill.designer.cs">
+      <DependentUpon>202112091443200_mig_update_skill.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -198,6 +208,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112091319122_mig_readstatus_message.resx">
       <DependentUpon>202112091319122_mig_readstatus_message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112091416386_mig_addSkill.resx">
+      <DependentUpon>202112091416386_mig_addSkill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112091443200_mig_update_skill.resx">
+      <DependentUpon>202112091443200_mig_update_skill.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

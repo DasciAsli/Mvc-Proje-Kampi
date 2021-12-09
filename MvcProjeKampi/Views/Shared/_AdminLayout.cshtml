@@ -66,21 +66,21 @@ to get the desired effect
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                             with font-awesome or any other icon font library -->
+         with font-awesome or any other icon font library -->
                         @*Kullanıcının rolü B ise bu liyi görüntülesin değilse görüntüleyemesin*@
                         @if (User.IsInRole("B"))
                         {
 
-                        <li class="nav-item has-treeview menu-open">
-                            <a href="/AdminCategory/Index" class="nav-link ">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Kategoriler
+                            <li class="nav-item has-treeview menu-open">
+                                <a href="/AdminCategory/Index" class="nav-link ">
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <p>
+                                        Kategoriler
 
-                                </p>
-                            </a>
+                                    </p>
+                                </a>
 
-                        </li>
+                            </li>
                         }
                         <li class="nav-item">
                             <a href="/AdminHeading/Index" class="nav-link">
@@ -164,7 +164,7 @@ to get the desired effect
                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                 <p>
                                     Yetkilendirmeler
-                                    
+
                                 </p>
                             </a>
                         </li>
@@ -181,7 +181,17 @@ to get the desired effect
                                 <i class="nav-icon far fa-envelope"></i>
                                 <p>
                                     Hata Sayfaları
-                                   
+
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/AdminSkill/Index/" class="nav-link">
+                                <i class="nav-icon fas fa-tree"></i>
+                                <p>
+                                    Yetenek Kartı Sayfası
 
                                 </p>
                             </a>
