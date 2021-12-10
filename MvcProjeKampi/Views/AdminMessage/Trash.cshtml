@@ -1,6 +1,6 @@
 ﻿@model List<EntityLayer.Concrete.Message>
 @{
-    ViewBag.Title = "SendBox";
+    ViewBag.Title = "Trash";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Mesaj Sayfası</h1>
+                    <h1>Silinen Mesajlar Sayfası</h1>
                 </div>
 
             </div>
@@ -29,7 +29,7 @@
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">Gönderilen Mesajlar</h3>
+                        <h3 class="card-title">Silinen Mesajlar</h3>
                         <div class="card-tools">
                             <div class="input-group input-group-sm">
                                 <input type="text" class="form-control" placeholder="Mail Kutusunda Ara">
@@ -44,27 +44,38 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                       
+                        
                         <div class="table-responsive mailbox-messages">
                             <table class="table table-hover table-striped">
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                        <tr>
-                                            @*<td>
-                                                <div class="icheck-primary">
-                                                    <input type="checkbox" value="" id="check1">
-                                                    <label for="check1"></label>
-                                                </div>
-                                            </td>*@
-                                            <td class="mailbox-star"><a href="/AdminMessage/GetSendboxMessageDetails/@item.MessageId"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/AdminMessage/GetSendboxMessageDetails/@item.MessageId">@item.Receiver</a></td>
-                                            <td class="mailbox-subject">
-                                                <b>@item.Subject</b> - @item.MessageContent<span>..</span>
-                                            </td>
-                                            <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">@item.MessageDate</td>
-                                        </tr>
+                                       
+                                            <tr >
+                                                @*<td>
+                                                    <div class="icheck-primary">
+                                                        <input type="checkbox" value="" id="check1">
+                                                        <label for="check1"></label>
+                                                    </div>
+                                                </td>*@
+                                                <td class="mailbox-star"><a href="/AdminMessage/GetTrashMessageDetails/@item.MessageId"><i class="fas fa-star text-warning"></i></a></td>
+                                                <td class="mailbox-name "><a href="/AdminMessage/GetTrashMessageDetails/@item.MessageId">@item.Receiver</a></td>
+                                                <td class="mailbox-name "><a href="/AdminMessage/GetTrashMessageDetails/@item.MessageId">@item.SenderMail</a></td>
+                                                <td class="mailbox-subject">
+                                                    @if (@item.MessageContent.Length > 30)
+                                                    {
+                                                        <b>@item.Subject - </b>@item.MessageContent.Substring(0, 30)<span>..</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <b>@item.Subject - </b>@item.MessageContent
+                                                    }
+
+                                                </td>
+                                                <td class="mailbox-attachment"></td>
+                                                <td class="mailbox-date">@item.MessageDate.ToShortDateString()</td>
+                                            </tr>
+
                                     }
 
                                 </tbody>
@@ -88,4 +99,5 @@
 
 </body>
 </html>
+
 

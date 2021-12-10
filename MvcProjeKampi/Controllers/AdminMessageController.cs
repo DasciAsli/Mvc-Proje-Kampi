@@ -45,7 +45,6 @@ namespace MvcProjeKampi.Controllers
 
             if (button == "draft")
             {
-
                 
                 if (result.IsValid)
                 {
@@ -124,6 +123,27 @@ namespace MvcProjeKampi.Controllers
             var Values = mm.GetByID(id);
             return View(Values);
         }
+        public ActionResult TrashStatus(int id)
+        {
+            mm.MessageTrash(id);
+            return RedirectToAction("Inbox");
+        }
+        public ActionResult Trash()
+        {
+            var messagelist = mm.GetList().FindAll(x => x.isTrash == true);
+            return View(messagelist);
+        }
+        public ActionResult GetTrashMessageDetails(int id)
+        {
+            var values = mm.GetByID(id);
+            return View(values);
+        }
 
+        public ActionResult MessageDelete(int id)
+        {
+            var values = mm.GetByID(id);
+            mm.MessageDelete(values);
+            return RedirectToAction("Trash");
+        }
     }
 }

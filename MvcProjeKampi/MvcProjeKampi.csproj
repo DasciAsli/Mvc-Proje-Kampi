@@ -2440,6 +2440,8 @@
     <Content Include="Views\AdminSkill\Index.cshtml" />
     <Content Include="Views\AdminMessage\Draft.cshtml" />
     <Content Include="Views\AdminMessage\GetDraftMessageDetails.cshtml" />
+    <Content Include="Views\AdminMessage\Trash.cshtml" />
+    <Content Include="Views\AdminMessage\GetTrashMessageDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -151,6 +151,10 @@
     <Compile Include="Migrations\202112091607423_mig_add_isDraft.designer.cs">
       <DependentUpon>202112091607423_mig_add_isDraft.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112101044565_mig_istrash.cs" />
+    <Compile Include="Migrations\202112101044565_mig_istrash.designer.cs">
+      <DependentUpon>202112101044565_mig_istrash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -221,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112091607423_mig_add_isDraft.resx">
       <DependentUpon>202112091607423_mig_add_isDraft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112101044565_mig_istrash.resx">
+      <DependentUpon>202112101044565_mig_istrash.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

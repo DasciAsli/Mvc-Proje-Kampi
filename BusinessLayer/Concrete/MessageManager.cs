@@ -24,14 +24,19 @@ namespace BusinessLayer.Concrete
             return messagevalue;
         }
 
+        public List<Message> GetList()
+        {
+            return _messagedal.List();
+        }
+
         public List<Message> GetListInbox()
         {
-            return _messagedal.List(x=>x.Receiver=="admin@gmail.com");
+            return _messagedal.List(x=>x.Receiver=="admin@gmail.com" && x.isTrash==false);
         }
 
         public List<Message> GetListSendbox()
         {
-            return _messagedal.List(x => x.SenderMail == "admin@gmail.com");
+            return _messagedal.List(x => x.SenderMail == "admin@gmail.com" && x.isTrash==false);
         }
 
         public void MessageAdd(Message message)
@@ -42,6 +47,14 @@ namespace BusinessLayer.Concrete
         public void MessageDelete(Message message)
         {
             _messagedal.Delete(message);
+        }
+
+        public void MessageTrash(int id)
+        {
+           var value= _messagedal.Get(x => x.MessageId == id);
+           value.isTrash = true;
+            _messagedal.Update(value);
+
         }
 
         public void MessageUpdate(Message message)
