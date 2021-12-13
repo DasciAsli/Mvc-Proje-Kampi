@@ -27,7 +27,7 @@ D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramewo
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.xml
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
-D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.dll
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.pdb
+D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete

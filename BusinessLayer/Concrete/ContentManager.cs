@@ -48,5 +48,10 @@ namespace BusinessLayer.Concrete
            return  _contentdal.List(x=>x.HeadingId==id);
           
         }
+
+        public List<Content> GetListByWriter()
+        {
+            return _contentdal.List(x => x.WriterId == 3);
+        }
     }
 }

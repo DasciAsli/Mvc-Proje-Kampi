@@ -71,3 +71,4 @@ D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAcces
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_update_skill.resources
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_isDraft.resources
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_istrash.resources
+D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete

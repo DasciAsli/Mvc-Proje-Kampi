@@ -130,7 +130,7 @@ namespace MvcProjeKampi.Controllers
         }
         public ActionResult Trash()
         {
-            var messagelist = mm.GetList().FindAll(x => x.isTrash == true);
+            var messagelist = mm.GetList().Where(x => x.SenderMail == "admin@gmail.com" && x.isTrash == true).ToList();
             return View(messagelist);
         }
         public ActionResult GetTrashMessageDetails(int id)

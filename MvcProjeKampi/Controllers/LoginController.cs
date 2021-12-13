@@ -50,5 +50,29 @@ namespace MvcProjeKampi.Controllers
             //}
 
         }
+
+        [HttpGet]
+        public ActionResult WriterLogin()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult WriterLogin(Writer writer)
+        {
+            Context c = new Context();
+            var writeruserinfo = c.Writers.FirstOrDefault(X => X.WriterMail == writer.WriterMail && X.WriterPassword == writer.WriterPassword);
+            if (writeruserinfo != null)
+            {
+                FormsAuthentication.SetAuthCookie(writeruserinfo.WriterMail, false);
+                Session["WriterMail"] = writeruserinfo.WriterMail;
+                return RedirectToAction("MyContent", "WriterPanelContent");
+            }
+            else
+            {
+                return RedirectToAction("WriterLogin");
+            }
+            
+        }
     }
 }
