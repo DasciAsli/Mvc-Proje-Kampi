@@ -1,6 +1,6 @@
 ﻿@model List<EntityLayer.Concrete.Heading>
 @{
-    ViewBag.Title = "MyHeading";
+    ViewBag.Title = "AllHeading";
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 
@@ -56,7 +56,7 @@
                             <th style="width: 10%">
                                 Yazar
                             </th>
-                           
+
 
                             <th style="width: 8%" class="text-center">
                                 Kategori
@@ -114,7 +114,7 @@
 
                                     </ul>
                                 </td>
-                              
+
                                 <td class="project-state">
                                     <span class="@color">@item.Category.CategoryName</span>
                                 </td>
@@ -124,17 +124,12 @@
                                         </i>
                                         Yazılar
                                     </a>
-                                    <a class="btn btn-info btn-sm" href="/WriterPanel/EditHeading/@item.HeadingId">
+                                    <a class="btn btn-info btn-sm" href="/WriterPanelContent/AddContent/@item.HeadingId">
                                         <i class="fas fa-pencil-alt">
                                         </i>
-                                        Düzenle
+                                        Bu Başlığa Yaz
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="/WriterPanel/DeleteHeading/@item.HeadingId">
-                                        <i class="fas fa-trash-alt">
-                                        </i>
-                                        Sil
-
-                                    </a>
+                                   
                                 </td>
                             </tr>
                         }
@@ -151,7 +146,5 @@
 
 </body>
 </html>
-<a href="/WriterPanel/NewHeading/" class=" btn btn-primary">Yeni Başlık Ekle</a>
-
 
 

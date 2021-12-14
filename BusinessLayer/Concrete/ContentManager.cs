@@ -20,27 +20,27 @@ namespace BusinessLayer.Concrete
 
         public void ContentAdd(Content content)
         {
-            throw new NotImplementedException();
+            _contentdal.Insert(content);
         }
 
         public void ContentDelete(Content content)
         {
-            throw new NotImplementedException();
+            _contentdal.Delete(content);
         }
 
         public void ContentUpdate(Content content)
         {
-            throw new NotImplementedException();
+            _contentdal.Update(content);
         }
 
         public Content GetByID(int id)
         {
-            throw new NotImplementedException();
+            return _contentdal.Get(x => x.ContentId == id);
         }
 
         public List<Content> GetList()
         {
-            throw new NotImplementedException();
+            return _contentdal.List();
         }
 
         public List<Content> GetListByID(int id)
