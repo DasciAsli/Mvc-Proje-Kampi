@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
@@ -15,10 +16,12 @@ namespace MvcProjeKampi.Controllers
     {
         MessageManager mm = new MessageManager(new EfMessageDal());
         MessageValidator writervalidator = new MessageValidator();
+        
         // GET: WriterPanelMessage
         public ActionResult Inbox()
         {
-            var messagevalues = mm.GetListInbox();
+            string p = (string)Session["WriterMail"];
+            var messagevalues = mm.GetListInbox(p);
             return View(messagevalues);
         }
         [HttpGet]
@@ -31,14 +34,14 @@ namespace MvcProjeKampi.Controllers
         public ActionResult NewMessage(Message message, string button)
         {
             ValidationResult result = writervalidator.Validate(message);
-
+            string p = (string)Session["WriterMail"];
             if (button == "draft")
             {
 
                 if (result.IsValid)
                 {
                     message.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-                    message.SenderMail = "emel@gmail.com";
+                    message.SenderMail = p;
                     message.isDraft = true;
                     mm.MessageAdd(message);
                     return RedirectToAction("Draft");
@@ -57,7 +60,7 @@ namespace MvcProjeKampi.Controllers
                 if (result.IsValid)
                 {
                     message.MessageDate = DateTime.Now;
-                    message.SenderMail = "emel@gmail.com";
+                    message.SenderMail = p;
                     message.isDraft = false;
                     mm.MessageAdd(message);
                     return RedirectToAction("SendBox");
@@ -89,15 +92,16 @@ namespace MvcProjeKampi.Controllers
             //return View();
         }
 
-        public PartialViewResult MessageListMenu()
+        public PartialViewResult MessageListMenu(string p)
         {
-            
-            ViewBag.MessageInboxCount = mm.GetListInbox().Where(x => x.ReadStatus == false).Count();
+            p = (string)Session["WriterMail"];
+            ViewBag.MessageInboxCount = mm.GetListInbox(p).Where(x => x.ReadStatus == false).Count();
             return PartialView();
         }
         public ActionResult SendBox()
         {
-            var messagevalues = mm.GetListSendbox();
+            string p = (string)Session["WriterMail"];
+            var messagevalues = mm.GetListSendbox(p);
             var sendmessages = messagevalues.FindAll(x => x.isDraft == false);
             return View(sendmessages);
         }
@@ -115,7 +119,8 @@ namespace MvcProjeKampi.Controllers
         }
         public ActionResult Draft()
         {
-            var sendList = mm.GetListSendbox();
+            string p = (string)Session["WriterMail"];
+            var sendList = mm.GetListSendbox(p);
             var draftList = sendList.FindAll(x => x.isDraft == true);
             return View(draftList);
         }
@@ -126,7 +131,8 @@ namespace MvcProjeKampi.Controllers
         }
         public ActionResult Trash()
         {
-            var messagelist = mm.GetList().Where(x=>x.SenderMail=="emel@gmail.com" && x.isTrash == true).ToList();
+            string p = (string)Session["WriterMail"];
+            var messagelist = mm.GetList().Where(x=>x.SenderMail==p && x.isTrash == true).ToList();
             return View(messagelist);
         }
         public ActionResult GetTrashMessageDetails(int id)

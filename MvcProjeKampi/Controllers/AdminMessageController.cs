@@ -22,12 +22,14 @@ namespace MvcProjeKampi.Controllers
        
         public ActionResult Inbox()
         {
-            var messagevalues = mm.GetListInbox();
+
+            var messagevalues = mm.GetListAdminInbox();
             return View(messagevalues);
         }
         public ActionResult SendBox()
         {
-            var messagevalues = mm.GetListSendbox();
+
+            var messagevalues = mm.GetListAdminSendbox();
             var sendmessages = messagevalues.FindAll(x => x.isDraft == false);            
             return View(sendmessages);
         }
@@ -42,6 +44,7 @@ namespace MvcProjeKampi.Controllers
         public ActionResult NewMessage(Message message,string button)
         {
             ValidationResult result = writervalidator.Validate(message);
+           
 
             if (button == "draft")
             {
@@ -112,8 +115,9 @@ namespace MvcProjeKampi.Controllers
             return View(values);
         }
         public ActionResult Draft()
-        {            
-            var sendList = mm.GetListSendbox();
+        {
+
+            var sendList = mm.GetListAdminSendbox();
             var draftList = sendList.FindAll(x => x.isDraft == true);
             return View(draftList);
         }
@@ -130,6 +134,7 @@ namespace MvcProjeKampi.Controllers
         }
         public ActionResult Trash()
         {
+            
             var messagelist = mm.GetList().Where(x => x.SenderMail == "admin@gmail.com" && x.isTrash == true).ToList();
             return View(messagelist);
         }

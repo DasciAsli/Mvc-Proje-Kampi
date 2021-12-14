@@ -29,14 +29,22 @@ namespace BusinessLayer.Concrete
             return _messagedal.List();
         }
 
-        public List<Message> GetListInbox()
+        public List<Message> GetListInbox(string p)
         {
-            return _messagedal.List(x=>x.Receiver== "emel@gmail.com" && x.isTrash==false);
+            return _messagedal.List(x=>x.Receiver == p && x.isTrash==false);
+        }
+        public List<Message> GetListAdminInbox()
+        {
+            return _messagedal.List(x => x.Receiver == "admin@gmail.com" && x.isTrash == false);
         }
 
-        public List<Message> GetListSendbox()
+        public List<Message> GetListSendbox(string p)
         {
-            return _messagedal.List(x => x.SenderMail == "emel@gmail.com" && x.isTrash==false);
+            return _messagedal.List(x => x.SenderMail == p && x.isTrash==false);
+        }
+        public List<Message> GetListAdminSendbox()
+        {
+            return _messagedal.List(x => x.SenderMail == "admin@gmail.com" && x.isTrash == false);
         }
 
         public void MessageAdd(Message message)

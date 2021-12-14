@@ -28,10 +28,11 @@ namespace MvcProjeKampi.Controllers
             cm.ContactUpdate(contactvalues);
             return View(contactvalues);
         }
-        public PartialViewResult MessageListMenu()
+        public PartialViewResult MessageListMenu(string p)
         {
+            
             ViewBag.ContactMessageCount = cm.GetList().Where(x => x.ReadStatus == false).Count();
-            ViewBag.MessageInboxCount = mm.GetListInbox().Where(x => x.ReadStatus == false).Count();        
+            ViewBag.MessageInboxCount = mm.GetListAdminInbox().Where(x => x.ReadStatus == false).Count();  
             return PartialView();
         }
     }
