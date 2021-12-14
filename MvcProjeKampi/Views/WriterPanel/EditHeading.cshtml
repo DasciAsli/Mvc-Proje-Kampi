@@ -13,6 +13,7 @@
         @Html.HiddenFor(x => x.HeadingId)
         @Html.HiddenFor(x => x.HeadingDate)
         @Html.HiddenFor(x => x.WriterId)
+        @Html.HiddenFor(x => x.HeadingStatus)
 
         @Html.Label("Başlık Adı")
         @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
@@ -24,7 +25,7 @@
         <br />
 
 
-        <button class="btn btn-success">Güncelle</button>
+        <button class="btn btn-success" type="submit">Güncelle</button>
 
     </div>
 }
