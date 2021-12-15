@@ -1,0 +1,65 @@
+﻿@model List<EntityLayer.Concrete.Content>
+@{
+    ViewBag.Title = "GetAllContent";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                @using (Html.BeginForm("GetAllContent", "AdminContent", FormMethod.Post))
+                {
+
+                    <div class="input-group">
+                        <input type="text" class="form-control rounded" placeholder="Aramak istediğiniz kelimeyi girin" aria-label="Search" name="p"
+                               aria-describedby="search-addon" />
+                        <button type="submit" class="btn btn-outline-success">Ara</button>
+                    </div>
+                   
+                }
+
+                <!-- Timelime example  -->
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <!-- The time line -->
+                        <div class="timeline">
+                            @foreach (var item in Model)
+                            {
+                                <!-- timeline time label -->
+                                <div class="time-label">
+                                    <span class="bg-success">@item.ContentDate.ToShortDateString()</span>
+                                </div>
+                                <!-- /.timeline-label -->
+                                <!-- timeline item -->
+                                <div>
+                                    <i class="fas fa-comment bg-yellow"></i>
+                                    <div class="timeline-item">
+                                        <h3 class="timeline-header"><a href="#">@item.Writer.WriterName  @item.Writer.WriterSurname </a> </h3>
+                                        <div class="timeline-body">
+                                            @item.ContentValue
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END timeline item -->
+                            }
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+
+
+            </div>
+            <!-- /.timeline -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- ./wrapper -->
+</body>
+</html>
+

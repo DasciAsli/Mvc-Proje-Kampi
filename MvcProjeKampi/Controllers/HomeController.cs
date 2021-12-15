@@ -26,6 +26,8 @@ namespace MvcProjeKampi.Controllers
 
             return View();
         }
+
+        [AllowAnonymous] //Login sayfasına yönlendirmeden direk açılması için
         public ActionResult HomePage()
         {
             return View();
