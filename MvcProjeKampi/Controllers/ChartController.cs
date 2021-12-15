@@ -1,4 +1,5 @@
-﻿using EntityLayer.Concrete;
+﻿using DataAccessLayer.Concrete;
+using EntityLayer.Concrete;
 using MvcProjeKampi.Models;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace MvcProjeKampi.Controllers
     [AllowAnonymous]
     public class ChartController : Controller
     {
+        Context c = new Context();
 
         //Oluşturdugumuz chartı burada sayfaya göndereceğiz
         // GET: Chart
@@ -22,9 +24,8 @@ namespace MvcProjeKampi.Controllers
         //Char işlemlerini yaptık
         public ActionResult CategoryChart()
         {
-            return Json(BlogList(),JsonRequestBehavior.AllowGet);
+            return Json(BlogList(), JsonRequestBehavior.AllowGet);
         }
-
 
         //BlogList bir metod içini doldurduk sınıfımızın
         public List<CategoryClass> BlogList()
@@ -32,8 +33,8 @@ namespace MvcProjeKampi.Controllers
             List<CategoryClass> ct = new List<CategoryClass>();
             ct.Add(new CategoryClass()
             {
-                CategoryName="Yazılım",
-                CategoryCount=8
+                CategoryName = "Yazılım",
+                CategoryCount = 8
             });
             ct.Add(new CategoryClass()
             {
@@ -51,6 +52,36 @@ namespace MvcProjeKampi.Controllers
                 CategoryCount = 1
             });
             return ct;
+        }
+
+
+       
+        public ActionResult CategoryLineChart()
+        {
+            return View();
+        }
+        public ActionResult CategoryColumnChart()
+        {
+            return View();
+        }
+        public ActionResult CategoryChart2()
+        {
+            return Json(CategoryListChart(), JsonRequestBehavior.AllowGet);
+        }
+
+        public List<CategoryClass> CategoryListChart()
+        {
+            List<CategoryClass> categoryClasses = new List<CategoryClass>();
+            using (var _context = new Context())
+            {
+                categoryClasses = _context.Categories.Select(x => new CategoryClass
+                {
+                    CategoryName = x.CategoryName,
+                    CategoryCount = x.CategoryName.Length
+                }).ToList();
+            }
+
+            return categoryClasses;
         }
     }
 }
