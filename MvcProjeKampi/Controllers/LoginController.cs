@@ -16,6 +16,7 @@ namespace MvcProjeKampi.Controllers
     public class LoginController : Controller
     {
         AdminManager adm = new AdminManager(new EfAdminDal());
+        WriterLoginManager wlm = new WriterLoginManager(new EfWriterDal());
 
         // GET: Login
         [HttpGet]
@@ -61,8 +62,9 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult WriterLogin(Writer writer)
         {
-            Context c = new Context();
-            var writeruserinfo = c.Writers.FirstOrDefault(X => X.WriterMail == writer.WriterMail && X.WriterPassword == writer.WriterPassword);
+            //Context c = new Context();
+            //var writeruserinfo = c.Writers.FirstOrDefault(X => X.WriterMail == writer.WriterMail && X.WriterPassword == writer.WriterPassword);
+            var writeruserinfo = wlm.GetWriter(writer.WriterMail,writer.WriterPassword);
             if (writeruserinfo != null)
             {
                 FormsAuthentication.SetAuthCookie(writeruserinfo.WriterMail, false);

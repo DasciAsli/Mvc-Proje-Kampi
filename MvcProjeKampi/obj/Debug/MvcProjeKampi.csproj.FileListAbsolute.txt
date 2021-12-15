@@ -361,3 +361,4 @@ D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\bin\PagedList.dll
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\bin\PagedList.Mvc.dll
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\bin\PagedList.xml
 D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\bin\PagedList.Mvc.xml
+D:\Masaüstü\MVC Kamp Projesi\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csproj.CopyComplete
