@@ -2662,6 +2662,7 @@
     <Content Include="Views\Chart\Index.cshtml" />
     <Content Include="Views\Chart\CategoryLineChart.cshtml" />
     <Content Include="Views\Chart\CategoryColumnChart.cshtml" />
+    <Content Include="Views\AdminHeading\HeadingReport.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
