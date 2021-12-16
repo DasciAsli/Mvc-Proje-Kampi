@@ -147,6 +147,7 @@
     <Compile Include="Controllers\AdminSkillController.cs" />
     <Compile Include="Controllers\AdminWriterController.cs" />
     <Compile Include="Controllers\AuthorizationController.cs" />
+    <Compile Include="Controllers\CalendarController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ChartController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -2058,6 +2059,7 @@
     <Content Include="AdminLTE-3.0.4\vitrin\images\images1\7.PNG" />
     <Content Include="AdminLTE-3.0.4\vitrin\images\images1\8.PNG" />
     <Content Include="AdminLTE-3.0.4\vitrin\images\images1\9.PNG" />
+    <Content Include="AdminLTE-3.0.4\vitrin\images\images1\v2.PNG" />
     <Content Include="AdminLTE-3.0.4\vitrin\images\loader.gif" />
     <Content Include="AdminLTE-3.0.4\vitrin\images\move_up.png" />
     <Content Include="AdminLTE-3.0.4\vitrin\images\next.png" />
@@ -2560,6 +2562,7 @@
     <Content Include="Views\Authorization\EditAdmin.cshtml" />
     <Content Include="Views\AdminSkill\AddSkill.cshtml" />
     <Content Include="Views\AdminSkill\EditSkill.cshtml" />
+    <Content Include="Views\Calendar\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
