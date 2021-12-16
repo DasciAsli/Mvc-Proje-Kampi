@@ -1,6 +1,7 @@
 ﻿ using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace MvcProjeKampi.Controllers
 
             return View(contactvalues);
         }
+
         public ActionResult GetContactDetails(int id)
         {
             var contactvalues =cm.GetByID(id);
@@ -34,6 +36,14 @@ namespace MvcProjeKampi.Controllers
             ViewBag.ContactMessageCount = cm.GetList().Where(x => x.ReadStatus == false).Count();
             ViewBag.MessageInboxCount = mm.GetListAdminInbox().Where(x => x.ReadStatus == false).Count();  
             return PartialView();
+        }
+
+        public ActionResult AddContact(Contact contact)
+        {
+            contact.ContactDate = DateTime.Now;
+            contact.ReadStatus = false;
+            cm.ContactAdd(contact);
+            return RedirectToAction("HomePage","Home"); 
         }
     }
 }
