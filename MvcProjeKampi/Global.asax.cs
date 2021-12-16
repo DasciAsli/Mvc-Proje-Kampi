@@ -12,7 +12,7 @@ namespace MvcProjeKampi
     {
         protected void Application_Start()
         {
-            GlobalFilters.Filters.Add(new AuthorizeAttribute());//Authorize işlemi proje seviyesine çıkarma
+            //GlobalFilters.Filters.Add(new AuthorizeAttribute());//Authorize işlemi proje seviyesine çıkarma
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

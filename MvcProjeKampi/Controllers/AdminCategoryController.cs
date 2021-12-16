@@ -15,9 +15,10 @@ namespace MvcProjeKampi.Controllers
     {
 
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
+        HeadingManager hm = new HeadingManager(new EfHeadingDal());
         // GET: AdminCategory
         //Sadece A Rolüne sahip kişiler bunu çalıştırabilecek
-        [Authorize(Roles="A")]
+        //[Authorize(Roles="A")]
         public ActionResult Index()
         {
             var categoryvalues = cm.GetList();
@@ -69,6 +70,12 @@ namespace MvcProjeKampi.Controllers
         {
             cm.CategoryUpdate(p);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult HeadingsByCategory(int id=0)
+        {
+            var values = hm.GetListByCategory(id);
+            return View(values);
         }
     }
 }
