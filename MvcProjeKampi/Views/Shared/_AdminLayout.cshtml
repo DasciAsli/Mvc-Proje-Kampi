@@ -68,8 +68,8 @@ to get the desired effect
                         <!-- Add icons to the links using the .nav-icon class
     with font-awesome or any other icon font library -->
                         @*Kullanıcının rolü B ise bu liyi görüntülesin değilse görüntüleyemesin*@
-                        @*@if (User.IsInRole("B"))
-                        {*@
+                        @if (User.IsInRole("A"))
+                        {
 
                             <li class="nav-item ">
                                 <a href="/AdminCategory/Index" class="nav-link ">
@@ -81,7 +81,7 @@ to get the desired effect
                                 </a>
 
                             </li>
-                        @*}*@
+                        }
                         <li class="nav-item">
                             <a href="/AdminHeading/Index" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
@@ -175,7 +175,7 @@ to get the desired effect
                         </li>
 
                         <li class="nav-item">
-                            <a href="pages/calendar.html" class="nav-link">
+                            <a href="/Authorization/Index/" class="nav-link">
                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                 <p>
                                     Yetkilendirmeler
@@ -232,7 +232,7 @@ to get the desired effect
 
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                            <a href="/Login/Logout/" class="nav-link">
                                 <i class="nav-icon far fa-plus-square"></i>
                                 <p>
                                     Çıkış Yap

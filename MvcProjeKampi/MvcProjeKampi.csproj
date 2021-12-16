@@ -146,6 +146,7 @@
     <Compile Include="Controllers\AdminMessageController.cs" />
     <Compile Include="Controllers\AdminSkillController.cs" />
     <Compile Include="Controllers\AdminWriterController.cs" />
+    <Compile Include="Controllers\AuthorizationController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ChartController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -2666,6 +2667,9 @@
     <Content Include="Views\AdminHeading\HeadingReport.cshtml" />
     <Content Include="Views\Test\SweetAlert.cshtml" />
     <Content Include="Views\AdminCategory\HeadingsByCategory.cshtml" />
+    <Content Include="Views\Authorization\Index.cshtml" />
+    <Content Include="Views\Authorization\AddAdmin.cshtml" />
+    <Content Include="Views\Authorization\EditAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
