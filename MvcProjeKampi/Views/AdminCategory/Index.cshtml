@@ -4,6 +4,9 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+
 <br />
 <table class="table table-bordered">
     <tr>
@@ -18,7 +21,7 @@
         <tr>
             <th>@item.CategoryId</th>
             <td>@item.CategoryName</td>
-            <td><a href="/AdminCategory/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/AdminCategory/DeleteCategory/@item.CategoryId" class="btn btn-danger" id="Sil" >Sil</a></td>
             <td><a href="/AdminCategory/EditCategory/@item.CategoryId" class="btn btn-warning">Güncelle</a></td>
             <td><a href="/AdminCategory/HeadingsByCategory/@item.CategoryId" class="btn btn-primary">Başlık</a></td>
         </tr>
@@ -26,4 +29,22 @@
 </table>
 
 <a href="/AdminCategory/AddCategory" class="btn btn-info">Yeni Kategori</a>
+
+
+<script>
+
+    $('#Sil').click(function () {
+
+        swal({
+            title: "Tebrikler",
+            text: "Silme işlemi başarıyla gerçekleşti",
+            icon: "başarılı",
+            timer: 5000
+        });
+
+    });
+
+
+  
+</script>
 
