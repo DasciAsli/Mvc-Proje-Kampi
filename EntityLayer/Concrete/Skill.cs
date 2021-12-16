@@ -12,7 +12,7 @@ namespace EntityLayer.Concrete
 
         [Key]
         public int SkillId { get; set; }
-     
+   
         [StringLength(50)]
         public string SkillName { get; set; }
 

@@ -1,0 +1,29 @@
+﻿@model List<EntityLayer.Concrete.Skill>
+@{
+    ViewBag.Title = "EditSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Yetenek Adı </th>
+        <th>Yetenek Oranı</th>
+        <th>Sil</th>             
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>          
+            <th>@item.SkillId</th>
+            <th>@item.SkillName</th>
+            <td>@item.SkillRate</td>
+            <td><a href="/AdminSkill/DeleteSkill/@item.SkillId" class="btn btn-danger" >Sil</a></td>       
+        </tr>
+    }
+</table>
+
+<a href="/AdminSkill/AddSkill" class="btn btn-info">Yeni Yetenek Ekle</a>
+<br />
+<a href="/AdminSkill/Index" class="btn btn-secondary mt-2">Sayfaya Dön</a>
